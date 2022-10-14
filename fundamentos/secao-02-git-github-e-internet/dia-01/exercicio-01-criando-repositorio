@@ -1,0 +1,116 @@
+# Criando um repositório
+
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório$ mkdir gitExe
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório$ cd gitExe
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git init
+Repositório vazio Git inicializado em  /home/guilherme/Repositório/gitExe/.git/
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ code
+
+=================
+
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório$ cd gitExe
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ touch README.md
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git add .
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git status
+No ramo main
+
+No commits yet
+
+Mudanças a serem submetidas:
+  (utilize "git rm --cached <arquivo>..." para não apresentar)
+        new file:   README.md
+
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git commit -m 'criação de README'
+[main (root-commit) 1e03e61] criação de README
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git checkout -b alterarReadme
+Switched to a new branch 'alterarReadme'
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git status
+No ramo alterarReadme
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git add .
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git status
+No ramo alterarReadme
+Mudanças a serem submetidas:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git commit -m 'Primeira alteração no arquivo'
+[alterarReadme fc4ebed] Primeira alteração no arquivo
+ 1 file changed, 5 insertions(+)
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git checkout main
+Switched to branch 'main'
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git merge alterarReadme
+Updating 1e03e61..fc4ebed
+Fast-forward
+ README.md | 5 +++++
+ 1 file changed, 5 insertions(+)
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git checkout -b atualizar-readme
+Switched to a new branch 'atualizar-readme'
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ touch infos.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git status
+No ramo atualizar-readme
+Arquivos não monitorados:
+  (utilize "git add <arquivo>..." para incluir o que será submetido)
+        infos.txt
+
+nada adicionado ao envio mas arquivos não registrados estão presentes (use "git add" to registrar)
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git add .
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git commit -m 'Criação do arquivo infos'
+[atualizar-readme 2efb794] Criação do arquivo infos
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 infos.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git status
+No ramo atualizar-readme
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   infos.txt
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git add .
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git commit -m 'Adição de dados ao infos'
+[atualizar-readme 5a9fa61] Adição de dados ao infos
+ 1 file changed, 2 insertions(+)
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git checkout -b adicionar-infos
+Switched to a new branch 'adicionar-infos'
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git status
+No ramo adicionar-infos
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git add .
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git commit -m 'Passo a passo do desenvolvimento'
+[adicionar-infos b811368] Passo a passo do desenvolvimento
+ 1 file changed, 1 insertion(+)
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git checkout atualizar-rea
+dme
+Switched to branch 'atualizar-readme'
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git merge adicionar-infos
+Updating 5a9fa61..b811368
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git checkout main
+Switched to branch 'main'
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git marge atualizar-readmegit: 'marge' não é um comando git. Veja 'git --help'.
+
+The most similar command is
+        merge
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ git merge atualizar-readmeUpdating fc4ebed..b811368
+Fast-forward
+ README.md | 1 +
+ infos.txt | 2 ++
+ 2 files changed, 3 insertions(+)
+ create mode 100644 infos.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ ls
+infos.txt  README.md
