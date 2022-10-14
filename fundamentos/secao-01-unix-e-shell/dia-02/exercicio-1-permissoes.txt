@@ -1,0 +1,23 @@
+# Permissões
+
+guilherme@IdeaPad-S145-15IWL-doGui:~$ ls
+'Área de Trabalho'   Downloads   Modelos   Público       snap
+ Documentos          Imagens     Música    Repositório   Vídeos
+guilherme@IdeaPad-S145-15IWL-doGui:~$ mkdir unix_tests_permissions
+guilherme@IdeaPad-S145-15IWL-doGui:~$ cd unix_tests_permissions
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests_permissions$ ls -l
+total 0
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests_permissions$ touch arquivo_teste.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests_permissions$ chmod a+rw arquivo_teste.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests_permissions$ ls -l
+total 0
+-rw-rw-rw- 1 guilherme guilherme 0 out 10 18:51 arquivo_teste.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests_permissions$ chmod a-w arquivo_teste.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests_permissions$ ls -l
+total 0
+-r--r--r-- 1 guilherme guilherme 0 out 10 18:51 arquivo_teste.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests_permissions$ chmod 644 arquivo_teste.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests_permissions$ ls -l
+total 0
+-rw-r--r-- 1 guilherme guilherme 0 out 10 18:51 arquivo_teste.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests_permissions$ 
