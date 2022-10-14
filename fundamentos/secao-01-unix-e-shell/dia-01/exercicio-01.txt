@@ -1,0 +1,28 @@
+# Criação de arquivos e diretórios
+
+guilherme@IdeaPad-S145-15IWL-doGui:~/Repositório/gitExe$ cd
+guilherme@IdeaPad-S145-15IWL-doGui:~$ mkdir unix_tests
+guilherme@IdeaPad-S145-15IWL-doGui:~$ cd unix_tests
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ touch trybe.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ cp trybe.txt trybe_backup.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ ls
+trybe_backup.txt  trybe.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ mv trybe.txt newtrybe.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ mkdir backup
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ mv trybe_backup.txt backup
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ mkdir backup2
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ mv backup/trybe_backup.txt backup2
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ rm -r backup
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ ls
+backup2  newtrybe.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ mv backup2 backup
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ pwd
+/home/guilherme/unix_tests
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ ls -l
+total 4
+drwxrwxr-x 2 guilherme guilherme 4096 out 10 18:41 backup
+-rw-rw-r-- 1 guilherme guilherme    0 out 10 18:35 newtrybe.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ rm -rd backup
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ ls
+newtrybe.txt
+guilherme@IdeaPad-S145-15IWL-doGui:~/unix_tests$ 
